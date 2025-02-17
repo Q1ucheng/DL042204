@@ -1,0 +1,104 @@
+site_name: DL042204 blogs
+theme:
+  icon:
+    admonition:
+      <type>: <icon> 
+  name: material
+  features:
+    - navigation.top   # 返回顶部的按钮 在上滑时出现
+    - admonition
+    - navigation.footer
+  icon:
+    repo: fontawesome/brands/github #右上角图标
+    repo_url: https://github.com/Q1ucheng/blogs # 右上角点击跳转的链接
+    repo_name: Q1ucheng.github.io # 右上角的名字
+  highlightjs: true
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+extra:
+  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  social:
+    
+    - icon: fontawesome/brands/github
+      link: https://github.com/Q1ucheng
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/2001723051?spm_id_from=333.1007.0.0
+
+markdown_extensions:
+  - attr_list
+  - abbr
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - md_in_html
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      # linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences # 代码块高亮插件
+  - meta # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.arithmatex:
+      generic: true
+ 
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+copyright: Copyright &copy; 2023 Wayne # 左下角的版权声明
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - search:   
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences 
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
